@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Center of Gravity & Toppling Moments in Zinc Alloy Wine Stoppers: A Physical Modeling Approach</title>
+<meta name="description" content="Why tall decorative wine stoppers tip over: CG height vs. the 9.25 mm pivot, toppling moments, and the fixes that keep a stag head upright.">
+<link rel="canonical" href="https://goldvalleyltd.github.io/guides/wine-stopper-center-of-gravity/">
+<meta property="og:title" content="Center of Gravity & Toppling Moments in Zinc Alloy Wine Stoppers: A Physical Modeling Approach">
+<meta property="og:description" content="Why tall decorative wine stoppers tip over: CG height vs. the 9.25 mm pivot, toppling moments, and the fixes that keep a stag head upright.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://goldvalleyltd.github.io/guides/wine-stopper-center-of-gravity/">
+<meta name="google-site-verification" content="7lYSJzwFEwVVvmBxMrC_s2HmvsHmRAUf4DjqhZ7b164" />
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Center of Gravity & Toppling Moments in Zinc Alloy Wine Stoppers: A Physical Modeling Approach","description":"Why tall decorative wine stoppers tip over: CG height vs. the 9.25 mm pivot, toppling moments, and the fixes that keep a stag head upright.","datePublished":"2026-11-16","author":{"@type":"Organization","name":"GoldValley Ltd"},"publisher":{"@type":"Organization","name":"GoldValley Ltd"},"mainEntityOfPage":"https://goldvalleyltd.github.io/guides/wine-stopper-center-of-gravity/"}</script>
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap">
+  <a class="brand" href="/">GoldValley Engineering Lab</a>
+  <nav><a href="/tools/">Tools</a><a href="/#guides">Guides</a><a href="https://www.goldvalleyltd.com/">GoldValley.com</a></nav>
+</div></header>
+<main><div class="wrap">
+<article class="guide">
+  <h1>Center of Gravity & Toppling Moments in Zinc Alloy Wine Stoppers: A Physical Modeling Approach</h1>
+  <p class="meta">2026-11-16 · GoldValley Engineering Lab</p>
+  <p class="tool-callout">Try it live: <a href="https://goldvalleyltd.github.io/winestopper-physics-lab/">Wine Stopper Physics Lab</a> — the interactive calculator behind this guide.</p>
+  <nav class="toc"><p>Contents</p><ul><li><a href="#the-lever-you-cannot-see-cg-height-against-a-925-mm-pivot">The Lever You Cannot See: CG Height Against a 9.25 mm Pivot</a></li><li><a href="#worked-example-the-55-35-65-mm-stag-head">Worked Example: The 55 × 35 × 65 mm Stag Head</a></li><li><a href="#balance-is-only-half-the-job-bore-fit-and-the-seal">Balance Is Only Half the Job: Bore Fit and the Seal</a></li><li><a href="#frequently-asked-questions">Frequently Asked Questions</a></li></ul></nav>
+  <div class="article-body">
+<h1 id="center-of-gravity-toppling-moments-in-zinc-alloy-wine-stoppers-a-physical-modeling-approach">Center of Gravity &amp; Toppling Moments in Zinc Alloy Wine Stoppers: A Physical Modeling Approach</h1>
+<ul>
+<li><strong>Height beats weight.</strong> A stopper tips when its composite center of gravity climbs past +25 mm (0.98") above the bottle rim or its anti-tilt safety factor falls below 1.35× — our lab grades either condition HIGH RISK.</li>
+<li><strong>The pivot is tiny.</strong> The whole assembly balances on the 9.25 mm (0.364") radius of an 18.5 mm (0.73") bore, so every gram above the rim works against stability.</li>
+<li><strong>The default stag head is already top-heavy.</strong> A 55 × 35 × 65 mm (2.17" × 1.38" × 2.56") Zamak 3 stag at 30% coring weighs 104.1 g (3.67 oz) with a composite CG of +27.6 mm (1.09") — high-risk as drawn; 50% deep coring plus a 38 g (1.34 oz) stainless counterweight stem brings it to +20.1 mm (0.79").</li>
+<li><strong>Sealing is a separate system.</strong> Stepped silicone rings (17.0–17.5 mm / 0.67"–0.69" at the base, 19.5–20.0 mm / 0.77"–0.79" at the top) grip a bore of 18.5 mm ± 0.5 mm (0.73" ± 0.020"), and the metal head never touches the wine — the stainless core and the silicone do the sealing.</li>
+</ul>
+<p>The stag head is magnificent on the shelf — antlers, muscle, a mirror-gold finish. In the bottle, it leans. A week later the lean is a tilt, the silicone rib on one side is permanently compressed, and air is creeping past the seal. The failure has nothing to do with how well the stopper was made and everything to do with statics: a tall metal ornament puts the center of gravity far above a pivot no wider than a bottle neck, and gravity does the rest.</p>
+<h2 id="the-lever-you-cannot-see-cg-height-against-a-925-mm-pivot">The Lever You Cannot See: CG Height Against a 9.25 mm Pivot</h2>
+<p>A wine stopper is two assemblies pretending to be one object: a decorative metal head above the rim and a sealing stem below it. Stability is decided by where their combined center of gravity (CG) sits relative to the rim — and the lever working against it is brutally short. The standard Bordeaux/Burgundy bottleneck has a bore of 18.5 mm (0.73"), which means the whole stopper pivots on a radius of just 9.25 mm (0.364"). Every millimeter of CG height above the rim multiplies the overturning moment; every gram of head mass multiplies it again.</p>
+<p>Our lab models this as rigid-body statics on a 15° tilt, the angle a bottle reaches when it is pulled from a crowded shelf or knocked in a door rack. The composite CG is the mass-weighted average of the head (above the rim, plus an 8.0 mm / 0.315" transition collar between the rim and the ornament base) and the stem (below the rim, where its mass counts negative and pulls the CG down). The overturning moment is the assembly's weight × CG height × sin(15°). Against it stands the restoring moment: weight × the 9.25 mm pivot radius × cos(15°), plus the friction torque bonus from the seal gripping the bore wall — 9.5 N·mm (1.35 oz·in) for a standard silicone-ribbed stem, 13.5 N·mm (1.91 oz·in) for the heavy stainless counterweight stem, and 6.5 N·mm (0.92 oz·in) for a traditional cork base. The anti-tilt safety factor is simply restoring moment divided by overturning moment, and the critical tipping angle follows from the ratio of the support arm to the CG height.</p>
+<p>That model sorts every design into three grades. Any single condition triggers the grade — a stopper can pass on safety factor and still fail on CG height, as the default stag head below does:</p>
+<table>
+<thead>
+<tr>
+<th>Grade</th>
+<th>Composite CG above rim</th>
+<th>Safety factor at 15° tilt</th>
+<th>Decorative top mass</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STABLE</td>
+<td>≤ +15 mm (0.59")</td>
+<td>≥ 2.1×</td>
+<td>≤ 90 g (3.17 oz)</td>
+</tr>
+<tr>
+<td>MARGINAL</td>
+<td>+15 to +25 mm (0.59"–0.98")</td>
+<td>1.35×–2.1×</td>
+<td>90–135 g (3.17–4.76 oz)</td>
+</tr>
+<tr>
+<td>HIGH RISK</td>
+<td>&gt; +25 mm (0.98")</td>
+<td>&lt; 1.35×</td>
+<td>&gt; 135 g (4.76 oz)</td>
+</tr>
+</tbody>
+</table>
+<p>The practical sweet spot for the decorative top is 45–75 g (1.59–2.65 oz): heavy enough to feel substantial in the hand, light enough to keep the CG in check. Above 90 g the design is already marginal before the height is even considered, and a solid-cast Zamak 3 ornament of any real size gets there fast — a solid head in the 60–80 g range is already enough to unbalance the assembly, which is why coring is not an optional refinement but the first stability decision.</p>
+<h2 id="worked-example-the-55-35-65-mm-stag-head">Worked Example: The 55 × 35 × 65 mm Stag Head</h2>
+<p>Numbers make the trade-off concrete. Take the lab's default stag head: a 55 × 35 × 65 mm (2.17" × 1.38" × 2.56") bounding box, a figurine fullness factor of 0.18 (antlers and open space mean the sculpture fills only about 18% of its bounding box), cast in Zamak 3. Four configurations, all evaluated at a 15° tilt on the standard 18.5 mm bore:</p>
+<table>
+<thead>
+<tr>
+<th>Configuration</th>
+<th>Top mass</th>
+<th>Composite CG</th>
+<th>Safety factor</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solid Zamak 3 stag, standard stem</td>
+<td>148.6 g (5.24 oz)</td>
+<td>+28.7 mm (1.13")</td>
+<td>1.95×</td>
+<td>HIGH RISK</td>
+</tr>
+<tr>
+<td>30% cored stag, standard stem (lab default)</td>
+<td>104.1 g (3.67 oz)</td>
+<td>+27.6 mm (1.09")</td>
+<td>2.29×</td>
+<td>HIGH RISK</td>
+</tr>
+<tr>
+<td>50% deep-cored stag + heavy SUS304 stem</td>
+<td>74.3 g (2.62 oz)</td>
+<td>+20.1 mm (0.79")</td>
+<td>4.08×</td>
+<td>MARGINAL</td>
+</tr>
+<tr>
+<td>6061 aluminium stag (30% cored), standard stem</td>
+<td>42.6 g (1.50 oz)</td>
+<td>+16.9 mm (0.67")</td>
+<td>5.24×</td>
+<td>MARGINAL</td>
+</tr>
+</tbody>
+</table>
+<p>Read the table from the top down and the physics tells its own story. The solid casting is the worst of every world: 148.6 g of head mass, a CG nearly 29 mm above the rim, and — beyond the statics — a thick solid section that risks internal shrinkage porosity and surface sink marks under plating. Standard 30% core-pulling (a uniform wall of about 3.0 mm / 0.118") cuts the top to 104.1 g, but the CG barely moves, because coring removes metal from the middle of the form, not from the top of it — the centroid sits at about 45% of the ornament's height either way, and 65 mm of height is simply a long lever. The safety factor clears 2.1×, but the CG at +27.6 mm still triggers HIGH RISK on height alone.</p>
+<p>The fixes that actually move the CG work from below and from the material, not from the sculpture. Deep 50% coring (a wall of about 2.0 mm / 0.079") brings the top to 74.3 g — inside the 45–75 g sweet spot — and pairing it with the heavy SUS304 stainless counterweight stem (38.0 g / 1.34 oz, its own centroid 21.0 mm / 0.83" below the rim) drags the composite CG down to +20.1 mm and lifts the safety factor to 4.08×. Switching the head alloy to 6061 aluminium (2.70 g/cm³ against Zamak 3's 6.60 g/cm³) cuts top mass by about 59% at identical geometry and reaches +16.9 mm with the standard stem. Shortening the decorative transition neck by 4–6 mm (0.157"–0.236") is the remaining lever when the sculpture itself cannot change.</p>
+<p>Be honest about the floor, though: a 65 mm tall figurative topper stays MARGINAL even after the best fixes, because the height itself sets the CG. The remedies buy margin and a much larger safety factor — they do not repeal the geometry. If a design must grade fully STABLE, the top has to come down in height, or the form has to change toward a compact profile: a solid T-bar or cylindrical cap fills about 65% of its bounding box and keeps its centroid low, where a figurine fills 18% and carries its mass high. Run your own dimensions through the <a href="https://goldvalleyltd.github.io/winestopper-physics-lab/">Wine Stopper Physics Lab</a> before committing to tooling — the model evaluates any bounding box, alloy, coring level, and stem combination, including uploads of your own 3D mesh.</p>
+<h2 id="balance-is-only-half-the-job-bore-fit-and-the-seal">Balance Is Only Half the Job: Bore Fit and the Seal</h2>
+<p>A stopper that stands upright but leaks is still a failure, and sealing obeys a different set of dimensions than balance. The bore it must grip is the same 18.5 mm (0.73") neck, with a ± 0.5 mm (± 0.020") tolerance across bottle makers — a full millimeter of variation that a single fixed-diameter plug cannot cover. The working answer is a stepped silicone ring stack: three to five tapered rings whose outside diameter grows from about 17.0–17.5 mm (0.67"–0.69") at the bottom ring to about 19.5–20.0 mm (0.77"–0.79") at the top. The lower rings guide and center the stem on insertion; the upper rings compress against the bore wall and lock with elastic friction. The seal specification is a Shore A 45–55° food-grade silicone three-rib ring, and a comfortable pull force for the finished stopper is 20–35 N (4.5–7.9 lbf) — firm enough to trust, light enough to open one-handed.</p>
+<p>One boundary is absolute and worth stating plainly: the decorative metal head never touches the wine. Wine is acidic (pH 3.0–3.8), and an unprotected zinc or brass surface in contact with it corrodes and leaches metal into the bottle. The head stays above the rim as a handle; everything below the rim is a food-grade stainless steel core (SUS304, or SUS316L for high-acid or long-soak use) carrying the silicone rings, which do all of the sealing. The governing requirements are GB 4806.9-2023 for the metal food-contact parts and FDA 21 CFR 177.2600 for the silicone — the reason the stem is stainless and the seal is silicone is regulatory, not decorative.</p>
+<p>Fit has one more edge case worth knowing before you order. The stepped rings are sized for the standard straight Bordeaux bore; on flared champagne or Burgundy necks with a bore wider than 19.2 mm (0.756"), the same stopper can show slight lateral play, because the rings meet the wall higher up the taper with less compression. If your bottles run wide, say so in the RFQ — the ring stack can be specified to match.</p>
+<blockquote>
+<p><strong>📋 Copy-Paste Spec for Your Custom Wine Stopper RFQ:</strong> Head: Zamak 3 die-cast (6.60 g/cm³) or 6061 aluminium (2.70 g/cm³); top mass target 45–75 g; core-pulling 30% standard (wall ~3.0 mm) or 50% deep (wall ~2.0 mm). Stem: SUS304 stainless core + Shore A 45–55° food-grade silicone 3-rib stepped rings (17.0–17.5 mm → 19.5–20.0 mm OD); bore 18.5 mm ± 0.5 mm; pull force 20–35 N. Stability: composite CG ≤ +15 mm target, safety factor ≥ 2.1× at 15° tilt. Finish: per plating chart; salt spray 48–96 h. MOQ 300 pcs; sample 3–7 working days; bulk 12–18 working days.</p>
+</blockquote>
+<h2 id="frequently-asked-questions">Frequently Asked Questions</h2>
+<p><strong>Q: How heavy can the decorative top be before the stopper tips?</strong>
+A: The sweet spot is 45–75 g (1.59–2.65 oz). Above 90 g (3.17 oz) the design grades MARGINAL on mass alone, and above 135 g (4.76 oz) it grades HIGH RISK — before height is even considered. A solid-cast Zamak 3 ornament reaches those numbers quickly, which is why 30–50% core-pulling is standard practice rather than an upgrade. Height matters as much as mass: a 65 mm tall topper can grade MARGINAL even at 74 g, because its CG sits high.</p>
+<p><strong>Q: Will one stopper fit all my bottles?</strong>
+A: One stopper fits the standard straight Bordeaux/Burgundy bore of 18.5 mm ± 0.5 mm (0.73" ± 0.020"), thanks to the stepped ring stack that spans 17.0–20.0 mm. Flared champagne or Burgundy necks wider than 19.2 mm (0.756") may show slight lateral play — if your bottles run wide, specify it in the RFQ so the ring stack can be matched to your neck.</p>
+<p><strong>Q: Is the metal safe next to wine?</strong>
+A: The metal head never contacts the wine. Everything below the rim is a food-grade stainless steel core (SUS304, or SUS316L for high-acid wines) carrying food-grade silicone sealing rings; the decorative head stays above the rim as a handle. The metal food-contact parts follow GB 4806.9-2023 and the silicone follows FDA 21 CFR 177.2600. Brass and zinc-alloy heads are handle-only by design — never sealing surfaces.</p>
+<p>Browse the range at <a href="https://www.goldvalleyltd.com/wine-barware/wine-stoppers/">metal wine stoppers</a>, including the <a href="https://www.goldvalleyltd.com/wine-barware/wine-stoppers/stag-head-wine-stopper/">stag-head wine stopper</a> that this guide models.</p>
+  </div>
+  <div class="cta-box">
+    <p><strong>Have a custom project in mind?</strong> Send your artwork and we will return a free rendering with a quote.</p>
+    <p><a class="cta-btn" href="https://www.goldvalleyltd.com/contact-us/">Request a Free Quote</a></p>
+  </div>
+  <p class="back"><a href="/#guides">← All guides</a></p>
+</article>
+
+</div></main>
+<footer class="site-footer"><div class="wrap">
+  <p>Built by <a href="https://www.goldvalleyltd.com/">GoldValley Ltd</a> — custom challenge coins, medals, enamel pins &amp; barware. Questions about a project? <a href="https://www.goldvalleyltd.com/contact-us/">Contact us</a>.</p>
+</div></footer>
+</body>
+</html>
