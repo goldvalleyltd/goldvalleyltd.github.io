@@ -66,14 +66,17 @@ Durability is the last check, and it is the same for both alloys: finished coins
 
 ## Frequently Asked Questions
 
-**Q: Which metal feels heavier at the same size?**
-A: Brass, by about 27%. H65 brass (8.4–8.5 g/cm³) is roughly a quarter denser than Zamak 3 zinc alloy (6.6–6.7 g/cm³), so any coin in brass weighs about 27% more than the identical coin in zinc. If heft is the priority and the artwork is shallow, brass is the direct answer; if the artwork needs deep relief, zinc with a thicker blank or a larger diameter is the way to reach the same feel.
+### Which metal feels heavier at the same size?
 
-**Q: Can I get deep 3D relief in brass?**
-A: Not by stamping. Cold stamping caps out at about 0.45 mm (0.018") of single-side relief before the metal stops flowing cleanly and the blank risks warping. Deep multi-step 3D relief of 0.80–1.80 mm (0.031"–0.071"), open cutouts, and sculptural forms need die-cast zinc. If your design mixes a deep-relief portrait with fine text, the practical solution is a die-cast zinc coin with the text on a flat field.
+Brass, by about 27%. H65 brass (8.4–8.5 g/cm³) is roughly a quarter denser than Zamak 3 zinc alloy (6.6–6.7 g/cm³), so any coin in brass weighs about 27% more than the identical coin in zinc. If heft is the priority and the artwork is shallow, brass is the direct answer; if the artwork needs deep relief, zinc with a thicker blank or a larger diameter is the way to reach the same feel.
 
-**Q: What are the lead time and minimum order?**
-A: The minimum order is 300 pieces. Artwork and 3D rendering take 2–4 hours, a physical sample takes 3–7 working days, and bulk production takes 12–18 working days. The steel die is rated for 50,000–100,000 shots, so reorders reuse the same tooling with no new die charge.
+### Can I get deep 3D relief in brass?
+
+Not by stamping. Cold stamping caps out at about 0.45 mm (0.018") of single-side relief before the metal stops flowing cleanly and the blank risks warping. Deep multi-step 3D relief of 0.80–1.80 mm (0.031"–0.071"), open cutouts, and sculptural forms need die-cast zinc. If your design mixes a deep-relief portrait with fine text, the practical solution is a die-cast zinc coin with the text on a flat field.
+
+### What are the lead time and minimum order?
+
+The minimum order is 300 pieces. Artwork and 3D rendering take 2–4 hours, a physical sample takes 3–7 working days, and bulk production takes 12–18 working days. The steel die is rated for 50,000–100,000 shots, so reorders reuse the same tooling with no new die charge.
 
 Browse the full range at [custom challenge coins](https://www.goldvalleyltd.com/challenge-coins/).
 

@@ -62,14 +62,17 @@ Fit has one more edge case worth knowing before you order. The stepped rings are
 
 ## Frequently Asked Questions
 
-**Q: How heavy can the decorative top be before the stopper tips?**
-A: The sweet spot is 45–75 g (1.59–2.65 oz). Above 90 g (3.17 oz) the design grades MARGINAL on mass alone, and above 135 g (4.76 oz) it grades HIGH RISK — before height is even considered. A solid-cast Zamak 3 ornament reaches those numbers quickly, which is why 30–50% core-pulling is standard practice rather than an upgrade. Height matters as much as mass: a 65 mm tall topper can grade MARGINAL even at 74 g, because its CG sits high.
+### How heavy can the decorative top be before the stopper tips?
 
-**Q: Will one stopper fit all my bottles?**
-A: One stopper fits the standard straight Bordeaux/Burgundy bore of 18.5 mm ± 0.5 mm (0.73" ± 0.020"), thanks to the stepped ring stack that spans 17.0–20.0 mm. Flared champagne or Burgundy necks wider than 19.2 mm (0.756") may show slight lateral play — if your bottles run wide, specify it in the RFQ so the ring stack can be matched to your neck.
+The sweet spot is 45–75 g (1.59–2.65 oz). Above 90 g (3.17 oz) the design grades MARGINAL on mass alone, and above 135 g (4.76 oz) it grades HIGH RISK — before height is even considered. A solid-cast Zamak 3 ornament reaches those numbers quickly, which is why 30–50% core-pulling is standard practice rather than an upgrade. Height matters as much as mass: a 65 mm tall topper can grade MARGINAL even at 74 g, because its CG sits high.
 
-**Q: Is the metal safe next to wine?**
-A: The metal head never contacts the wine. Everything below the rim is a food-grade stainless steel core (SUS304, or SUS316L for high-acid wines) carrying food-grade silicone sealing rings; the decorative head stays above the rim as a handle. The metal food-contact parts follow GB 4806.9-2023 and the silicone follows FDA 21 CFR 177.2600. Brass and zinc-alloy heads are handle-only by design — never sealing surfaces.
+### Will one stopper fit all my bottles?
+
+One stopper fits the standard straight Bordeaux/Burgundy bore of 18.5 mm ± 0.5 mm (0.73" ± 0.020"), thanks to the stepped ring stack that spans 17.0–20.0 mm. Flared champagne or Burgundy necks wider than 19.2 mm (0.756") may show slight lateral play — if your bottles run wide, specify it in the RFQ so the ring stack can be matched to your neck.
+
+### Is the metal safe next to wine?
+
+The metal head never contacts the wine. Everything below the rim is a food-grade stainless steel core (SUS304, or SUS316L for high-acid wines) carrying food-grade silicone sealing rings; the decorative head stays above the rim as a handle. The metal food-contact parts follow GB 4806.9-2023 and the silicone follows FDA 21 CFR 177.2600. Brass and zinc-alloy heads are handle-only by design — never sealing surfaces.
 
 Browse the range at [metal wine stoppers](https://www.goldvalleyltd.com/wine-barware/wine-stoppers/), including the [stag-head wine stopper](https://www.goldvalleyltd.com/wine-barware/wine-stoppers/stag-head-wine-stopper/) that this guide models.
 
