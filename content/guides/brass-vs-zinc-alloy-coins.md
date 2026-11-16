@@ -85,7 +85,7 @@ FACT-CHECK — GH-001 brass-vs-zinc-alloy-coins
 Every quantitative claim in this draft, with its source.
 
 1. Zamak 3 density 6.6–6.7 g/cm³; H65 brass 8.4–8.5 g/cm³.
-   Source: engineering-params.md §一·1 (materials table). Also medal lab presets.js MATERIALS (Zamak 3 = 6.70, H65/C26000 = 8.50).
+   Source: engineering-params.md §一·1 (materials table). Also medal lab presets.js MATERIALS (Zamak 3 = 6.70, H65/C26800 = 8.50).
 2. Brass ~27% denser/heavier than zinc at identical geometry (8.5 / 6.7 = 1.269).
    Source: arithmetic from (1).
 3. Weight table values (24.2/30.8 g, 28.6/36.3 g, 37.3/47.3 g, 47.5/60.2 g, 48.1/61.1 g).
@@ -112,6 +112,6 @@ Every quantitative claim in this draft, with its source.
     Source: engineering-params.md Tier 1 + §三·2 + §五.
 14. One-sided relief / counter-relief warping mechanism (stamping springback/cupping).
     Source: engineering-params.md §二·2 (qualitative; no numbers claimed).
-15. H65 ASTM designation DROPPED from the draft (QC decision 2026-11-16): labs say C26000, engineering-params.md §一·1 says C26800 (metallurgically correct for H65's 63.5–68% Cu; C26000 is 70% Cu cartridge brass). The article now says plain "H65 brass" to avoid asserting either; the lab/params discrepancy is logged for later cleanup, not resolved here.
+15. H65 ASTM designation DROPPED from the draft (QC decision 2026-11-16): labs say C26000, engineering-params.md §一·1 says C26800 (metallurgically correct for H65's 63.5–68% Cu; C26000 is 70% Cu cartridge brass). The article now says plain "H65 brass" to avoid asserting either; the lab/params discrepancy is logged for later cleanup, not resolved here. RESOLVED 2026-11-16 evening: user chose A (fix tools per params library); labs now say C26800 (goldvalley-work c34b84b, org 75d03fc/d6a147c); future guides may cite H65/C26800 directly.
 16. Title word "Tonnage": kept per assigned title; body gives no tonnage figures (skill Tier-2 ban). Forming described qualitatively as hydraulic coining press / hot-chamber die-casting per engineering-params.md §八 lexicon.
 -->

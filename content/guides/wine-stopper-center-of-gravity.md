@@ -115,7 +115,7 @@ Every quantitative claim in this draft, with its source.
 17. Stepped rings: 3–5 layers; bottom OD 17.0–17.5 mm → top OD 19.5–20.0 mm.
     Source: teardown §三.
 18. Shore A 45–55° food-grade silicone 3-rib rings.
-    Source: teardown 酒塞的系统性拆解.md §二 (line 26: 邵氏硬度优选 Shore A 45°~55°). RESOLVED by QC 2026-11-16: the lab presets say Shore A 60±5, but the teardown (product knowledge base, with the engineering rationale) wins for the article. The lab preset discrepancy is logged for later cleanup.
+    Source: teardown 酒塞的系统性拆解.md §二 (line 26: 邵氏硬度优选 Shore A 45°~55°). RESOLVED by QC 2026-11-16: the lab presets say Shore A 60±5, but the teardown (product knowledge base, with the engineering rationale) wins for the article. The lab preset discrepancy is logged for later cleanup. RESOLVED 2026-11-16 evening: user chose A; lab presets now say Shore A 45–55 (goldvalley-work c34b84b, org d6a147c).
 19. Comfortable pull force 20–35 N (4.5–7.9 lbf).
     Source: task brief + GitHub_Pages内容站实施方案.md guides matrix (silicone O-ring row, "20~35 N 舒适拔出力实测"). NOT in teardown or lab files — flagged to parent.
 20. Wine pH 3.0–3.8; metal head never touches wine; SUS304 core (SUS316L for high-acid/long-soak); silicone does the sealing.
