@@ -1,14 +1,22 @@
-<article class="guide">
-  <h1>$title</h1>
-  <p class="meta">$date · GoldValley Engineering Lab</p>
-  <p class="tool-callout">Try it live: <a href="$tool_url">$tool_name</a> — the interactive calculator behind this guide.</p>
-  $toc
-  <div class="article-body">
+<div class="guide-layout">
+  <article class="guide">
+    <h1>$title</h1>
+    <p class="meta">$date · $read_mins min read · GoldValley Engineering Lab</p>
+    <div class="article-body">
 $content
-  </div>
-  <div class="cta-box">
-    <p><strong>Have a custom project in mind?</strong> Send your artwork and we will return a free rendering with a quote.</p>
-    <p><a class="cta-btn" href="https://www.goldvalleyltd.com/contact-us/">Request a Free Quote</a></p>
-  </div>
-  <p class="back"><a href="/guides/">← All guides</a></p>
-</article>
+    </div>
+    <div class="cta-box">
+      <p><strong>Have a custom project in mind?</strong> Send your artwork and we will return a free rendering with a quote.</p>
+      <p><a class="cta-btn" href="https://www.goldvalleyltd.com/contact-us/">Request a Free Quote</a></p>
+    </div>
+    <p class="back"><a href="/guides/">← All guides</a></p>
+  </article>
+  <aside class="guide-sidebar">
+    <div class="sidebar-tool">
+      <p><strong>Try it live</strong></p>
+      <p><a href="$tool_url">$tool_name</a></p>
+      <p>The interactive calculator behind this guide.</p>
+    </div>
+    $toc
+  </aside>
+</div>

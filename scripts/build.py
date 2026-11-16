@@ -190,6 +190,7 @@ def main():
             guide_tpl,
             title=meta["title"],
             date=str(meta["date"]),
+            read_mins=meta["_read_mins"],
             description=meta["description"],
             toc=build_toc(body),
             tool_url=meta["tool"],
@@ -199,7 +200,7 @@ def main():
         )
         full = render_template(
             base, title=meta["title"], description=meta["description"],
-            canonical=url, og_type="article", body=page, wrap_class="",
+            canonical=url, og_type="article", body=page, wrap_class="wide",
             json_ld=json_ld_article(meta, url), gsc_meta=GSC_META,
         )
         write(ROOT / "guides" / meta["slug"] / "index.html", full)
