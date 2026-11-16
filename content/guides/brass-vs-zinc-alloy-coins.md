@@ -3,6 +3,7 @@ title: "Zinc Alloy vs. Brass for Custom Challenge Coins: Density, Die-Casting To
 slug: brass-vs-zinc-alloy-coins
 description: "Zinc alloy vs. brass challenge coins: how the density gap drives weight, feel and cost — and when to choose die-cast zinc or stamped brass."
 date: 2026-11-16
+topic: "Challenge Coins"
 tool: https://goldvalleyltd.github.io/medal-coin-weight-lab/
 tool_name: "Challenge Coin & Medal Weight Lab"
 ---

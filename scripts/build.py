@@ -50,6 +50,7 @@ TOOLS = [
     {
         "name": "Challenge Coin & Medal Weight Lab",
         "url": SITE + "/medal-coin-weight-lab/",
+        "tag": "Weight · Volume · DFM",
         "blurb": ("Estimate net metal weight, volume and DFM rating for "
                   "challenge coins and finisher medals from diameter, "
                   "thickness, relief and alloy — with a live 3D preview."),
@@ -57,6 +58,7 @@ TOOLS = [
     {
         "name": "Wine Stopper Physics Lab",
         "url": SITE + "/winestopper-physics-lab/",
+        "tag": "Balance · Bore Fit · Safety",
         "blurb": ("Check bore fit, centre of gravity, tip-over safety and "
                   "mass for metal wine stoppers — with a live 3D preview."),
     },
@@ -140,15 +142,45 @@ def write(path, content):
     print(f"wrote {path.relative_to(ROOT)}")
 
 
+def read_time_minutes(body):
+    words = len(re.sub(r"[#>*`_|\[\]()]", " ", body).split())
+    return max(1, round(words / 200))
+
+
+def guide_row(meta, url):
+    topic = meta.get("topic", "Engineering")
+    mins = meta["_read_mins"]
+    return (
+        f'<a class="guide-row" href="{url}">'
+        f'<h2>{meta["title"]}</h2>'
+        f'<p>{meta["description"]}</p>'
+        f'<span class="guide-meta"><span class="topic">{topic}</span> '
+        f'{meta["date"]} · {mins} min read</span></a>'
+    )
+
+
+def tool_card(t):
+    return (
+        f'<a class="tool-card" href="{t["url"]}">'
+        f'<span class="tool-badge">Interactive tool · Live 3D</span>'
+        f'<h2>{t["name"]}</h2>'
+        f'<p class="tool-tag">{t["tag"]}</p>'
+        f'<p>{t["blurb"]}</p>'
+        f'<span class="tool-launch">Open the lab →</span></a>'
+    )
+
+
 def main():
     base = load_template("base.html")
     guide_tpl = load_template("guide.html")
     home_tpl = load_template("home.html")
     tools_tpl = load_template("tools.html")
+    guides_tpl = load_template("guides.html")
 
     guides = []
     for path in sorted(CONTENT.glob("*.md")):
         meta, body = parse_guide(path)
+        meta["_read_mins"] = read_time_minutes(body)
         html = markdown.markdown(
             body, extensions=["extra", "toc", "sane_lists"],
             extension_configs={"toc": {"toc_depth": "2-3"}})
@@ -167,23 +199,20 @@ def main():
         )
         full = render_template(
             base, title=meta["title"], description=meta["description"],
-            canonical=url, og_type="article", body=page,
+            canonical=url, og_type="article", body=page, wrap_class="",
             json_ld=json_ld_article(meta, url), gsc_meta=GSC_META,
         )
         write(ROOT / "guides" / meta["slug"] / "index.html", full)
         guides.append((meta, url))
 
     guides.sort(key=lambda g: str(g[0]["date"]), reverse=True)
-    cards = "".join(
-        f'<a class="card" href="{url}"><h2>{m["title"]}</h2>'
-        f'<p>{m["description"]}</p><span>{m["date"]}</span></a>'
-        for m, url in guides)
-    tool_cards = "".join(
-        f'<a class="card" href="{t["url"]}"><h2>{t["name"]}</h2>'
-        f'<p>{t["blurb"]}</p></a>' for t in TOOLS)
+    rows = "".join(guide_row(m, url) for m, url in guides)
+    latest_rows = "".join(guide_row(m, url) for m, url in guides[:3])
+    tool_cards = "".join(tool_card(t) for t in TOOLS)
 
     home_body = render_template(home_tpl, tool_cards=tool_cards,
-                                guide_cards=cards)
+                                guide_rows=latest_rows,
+                                guide_count=len(guides))
     home = render_template(
         base, title="GoldValley Engineering Lab — Interactive DFM Tools "
                    "for Custom Metal Products",
@@ -191,6 +220,7 @@ def main():
                      "from GoldValley: challenge coin and medal weight "
                      "estimation, wine stopper physics, and DFM guides."),
         canonical=SITE + "/", og_type="website", body=home_body,
+        wrap_class="wide",
         json_ld=('{"@context":"https://schema.org","@type":"WebSite",'
                  '"name":"GoldValley Engineering Lab",'
                  f'"url":"{SITE}/"}}'),
@@ -203,15 +233,32 @@ def main():
         description=("Free interactive DFM tools: challenge coin and medal "
                      "weight lab, wine stopper physics lab."),
         canonical=SITE + "/tools/", og_type="website", body=tools_body,
+        wrap_class="wide",
         json_ld=('{"@context":"https://schema.org","@type":"WebPage",'
                  '"name":"Interactive Tools — GoldValley Engineering Lab",'
                  f'"url":"{SITE}/tools/"}}'),
         gsc_meta=GSC_META)
     write(ROOT / "tools" / "index.html", tools)
 
+    guides_body = render_template(guides_tpl, guide_rows=rows,
+                                  guide_count=len(guides))
+    guides_page = render_template(
+        base, title="Engineering Guides — GoldValley Engineering Lab",
+        description=("DFM whitepapers from GoldValley: alloy selection, "
+                     "centre-of-gravity modelling, and manufacturing "
+                     "guides for custom metal products."),
+        canonical=SITE + "/guides/", og_type="website", body=guides_body,
+        wrap_class="wide",
+        json_ld=('{"@context":"https://schema.org","@type":"WebPage",'
+                 '"name":"Engineering Guides — GoldValley Engineering Lab",'
+                 f'"url":"{SITE}/guides/"}}'),
+        gsc_meta=GSC_META)
+    write(ROOT / "guides" / "index.html", guides_page)
+
     today = date.today().isoformat()
     urls = [(SITE + "/", today, "1.0"),
-            (SITE + "/tools/", today, "0.8")]
+            (SITE + "/tools/", today, "0.8"),
+            (SITE + "/guides/", today, "0.8")]
     for t in TOOLS:
         urls.append((t["url"], today, "0.8"))
     for m, url in guides:

@@ -1,5 +1,6 @@
 body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;background:#0b0f14;color:#e8edf2;line-height:1.65}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+.wrap.wide{max-width:1120px}
 a{color:#7fb3d5}
 .site-header{border-bottom:1px solid #223040;padding:14px 0}
 .site-header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
@@ -11,11 +12,28 @@ h1{font-size:28px;line-height:1.3;margin:0 0 10px}
 h2{font-size:22px;margin:36px 0 10px}
 h3{font-size:18px;margin:28px 0 8px}
 p.lede{color:#9fb0c0;margin:0 0 28px;font-size:17px}
-.card{display:block;background:#131a22;border:1px solid #223040;border-radius:12px;padding:18px 22px;margin:0 0 16px;text-decoration:none;color:inherit}
-.card:hover{border-color:#3d5a74}
-.card h2{font-size:19px;margin:0 0 6px;color:#f2c94c}
-.card p{margin:0;color:#9fb0c0;font-size:15px}
-.card span{display:block;margin-top:8px;color:#7c8a98;font-size:13px}
+.hero{margin-bottom:8px}
+.hero h1{font-size:34px}
+.section{margin-top:44px}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border-bottom:1px solid #223040;padding-bottom:10px;margin-bottom:20px}
+.section-head h2{margin:0;font-size:22px}
+.section-link{color:#9fb0c0;text-decoration:none;font-size:15px;white-space:nowrap}
+.section-link:hover{color:#f2c94c}
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.tool-card{display:block;background:#131a22;border:1px solid #223040;border-top:3px solid #f2c94c;border-radius:12px;padding:22px 24px;text-decoration:none;color:inherit}
+.tool-card:hover{border-color:#3d5a74;border-top-color:#f2c94c}
+.tool-badge{display:inline-block;color:#f2c94c;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.tool-card h2{font-size:20px;margin:10px 0 4px;color:#e8edf2}
+.tool-tag{color:#7c8a98;font-size:13px;margin:0 0 10px}
+.tool-card p{margin:0 0 14px;color:#9fb0c0;font-size:15px}
+.tool-launch{color:#f2c94c;font-weight:600;font-size:15px}
+.guide-list{border-top:1px solid #223040}
+.guide-row{display:block;padding:22px 8px;border-bottom:1px solid #223040;text-decoration:none;color:inherit}
+.guide-row:hover{background:#10161d}
+.guide-row h2{font-size:20px;line-height:1.4;margin:0 0 6px;color:#f2c94c}
+.guide-row p{margin:0 0 10px;color:#9fb0c0;font-size:15px}
+.guide-meta{color:#7c8a98;font-size:13px}
+.topic{display:inline-block;background:#1a2a38;color:#7fb3d5;border-radius:20px;padding:2px 10px;margin-right:8px;font-size:12px;font-weight:600}
 .meta{color:#7c8a98;font-size:14px;margin:0 0 20px}
 .tool-callout{background:#131a22;border-left:4px solid #f2c94c;padding:12px 16px;border-radius:0 8px 8px 0;margin:0 0 24px}
 .toc{background:#10161d;border:1px solid #223040;border-radius:10px;padding:12px 20px;margin:0 0 28px}
@@ -33,4 +51,5 @@ p.lede{color:#9fb0c0;margin:0 0 28px;font-size:17px}
 .cta-btn{display:inline-block;background:#f2c94c;color:#0b0f14;font-weight:700;text-decoration:none;padding:10px 22px;border-radius:8px;margin-top:6px}
 .back{margin-top:32px}
 .site-footer{border-top:1px solid #223040;padding:24px 0 32px;color:#7c8a98;font-size:14px}
+@media (max-width:720px){.tool-grid{grid-template-columns:1fr}.hero h1{font-size:27px}}
 @media (max-width:560px){h1{font-size:24px}.site-header nav a{margin-left:12px}}

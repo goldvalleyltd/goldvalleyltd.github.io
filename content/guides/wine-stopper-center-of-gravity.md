@@ -3,6 +3,7 @@ title: "Center of Gravity & Toppling Moments in Zinc Alloy Wine Stoppers: A Phys
 slug: wine-stopper-center-of-gravity
 description: "Why tall decorative wine stoppers tip over: CG height vs. the 9.25 mm pivot, toppling moments, and the fixes that keep a stag head upright."
 date: 2026-11-16
+topic: "Wine Stoppers"
 tool: https://goldvalleyltd.github.io/winestopper-physics-lab/
 tool_name: "Wine Stopper Physics Lab"
 ---
