@@ -71,6 +71,19 @@ def slugify(text):
     return re.sub(r"\s+", "-", text)
 
 
+def css_version():
+    """Short content hash of the stylesheet, for cache-busting.
+
+    GitHub Pages' CDN can serve a stale style.css for minutes after a
+    push while the HTML is already new — the page then renders without
+    the new layout rules (caught 2026-11-16: sidebar stacked at the
+    bottom). A hash query string makes every CSS change a new URL.
+    """
+    import hashlib
+    data = io.open(ROOT / "assets" / "style.css", "rb").read()
+    return hashlib.md5(data).hexdigest()[:8]
+
+
 def load_template(name):
     return io.open(TEMPLATES / name, encoding="utf-8").read()
 
@@ -90,8 +103,11 @@ def parse_guide(path):
     for key in ("title", "slug", "description", "date", "tool", "tool_name"):
         if not meta.get(key):
             sys.exit(f"ERROR: {path.name} frontmatter missing '{key}'")
-    # Drop a leading H1 if it duplicates the frontmatter title.
-    body = re.sub(r"^# .+\n+", "", body, count=1)
+    # Drop a leading H1 if it duplicates the frontmatter title. The body
+    # usually starts with a blank line after the frontmatter block, so
+    # allow leading whitespace (without it the strip silently misses and
+    # the page ships a duplicate H1 — caught 2026-11-16).
+    body = re.sub(r"^\s*# .+\n+", "", body, count=1)
     # Strip HTML comments (FACT-CHECK audit notes stay in the .md source,
     # never in the published page).
     body = re.sub(r"<!--.*?-->", "", body, flags=re.S)
@@ -201,7 +217,7 @@ def main():
         full = render_template(
             base, title=meta["title"], description=meta["description"],
             canonical=url, og_type="article", body=page, wrap_class="wide",
-            json_ld=json_ld_article(meta, url), gsc_meta=GSC_META,
+            json_ld=json_ld_article(meta, url), gsc_meta=GSC_META, css_version=css_version(),
         )
         write(ROOT / "guides" / meta["slug"] / "index.html", full)
         guides.append((meta, url))
@@ -225,7 +241,7 @@ def main():
         json_ld=('{"@context":"https://schema.org","@type":"WebSite",'
                  '"name":"GoldValley Engineering Lab",'
                  f'"url":"{SITE}/"}}'),
-        gsc_meta=GSC_META)
+        gsc_meta=GSC_META, css_version=css_version())
     write(ROOT / "index.html", home)
 
     tools_body = render_template(tools_tpl, tool_cards=tool_cards)
@@ -238,7 +254,7 @@ def main():
         json_ld=('{"@context":"https://schema.org","@type":"WebPage",'
                  '"name":"Interactive Tools — GoldValley Engineering Lab",'
                  f'"url":"{SITE}/tools/"}}'),
-        gsc_meta=GSC_META)
+        gsc_meta=GSC_META, css_version=css_version())
     write(ROOT / "tools" / "index.html", tools)
 
     guides_body = render_template(guides_tpl, guide_rows=rows,
@@ -253,7 +269,7 @@ def main():
         json_ld=('{"@context":"https://schema.org","@type":"WebPage",'
                  '"name":"Engineering Guides — GoldValley Engineering Lab",'
                  f'"url":"{SITE}/guides/"}}'),
-        gsc_meta=GSC_META)
+        gsc_meta=GSC_META, css_version=css_version())
     write(ROOT / "guides" / "index.html", guides_page)
 
     today = date.today().isoformat()
