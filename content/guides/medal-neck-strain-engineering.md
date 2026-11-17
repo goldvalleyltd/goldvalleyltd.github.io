@@ -13,7 +13,7 @@ tool_name: "Challenge Coin & Medal Weight Lab"
 - **Weight is the whole story.** A standard 70 mm (2.76") zinc finisher medal weighs 112.2 g (3.96 oz) fully assembled; the same medal in brass reaches 154.8 g (5.46 oz) — and at 80 mm (3.15") in brass it passes 250 g.
 - **The jump is the load case.** A finisher celebrating at the line generates a 2.5g peak shock — 2.75 N (0.28 kgf) on a standard 70 mm medal, 6.24 N (0.64 kgf) on the heavy 80 mm brass version — and the unwelded Ø1.5 mm (0.059") jump ring is the weak link.
 - **Ribbon width is pressure math.** Neck pressure falls in direct proportion to ribbon width: 25 mm (1.0") to 38 mm (1.5") cuts pressure to 66% at the same weight.
-- **Cutouts beat willpower.** A 25% open cutout drops the standard 70 mm zinc medal from 112.2 g to 88.5 g — a 21% weight cut with no change to diameter or relief.
+- **Cutouts beat willpower.** A 25% open cutout drops the standard 70 mm zinc medal from 112.2 g to 88.5 g — a 21% cut with no change to diameter or relief.
 
 The medal survives 42.195 km and fails at the finish line: the runner jumps, and the medal hits the asphalt — or it stays on, and the ribbon carves a red line across a tired neck. Both failures are decided months earlier by three numbers: assembled weight, ribbon width, and the hanger between them. This guide works through all three with the engine behind our [Challenge Coin & Medal Weight Lab](https://goldvalleyltd.github.io/medal-coin-weight-lab/), so you can check your medal before artwork approval.
 
@@ -39,7 +39,7 @@ Neck pressure is the medal's weight, pulled by gravity, spread over the ribbon's
 
 $$P_{neck} = \frac{W_{total} \times g}{2 \times W_{ribbon} \times L_{contact}}$$
 
-Weight sits in the numerator and ribbon width in the denominator, which is why width is the cheapest fix in the whole specification. At the same medal weight, widening the ribbon from 25 mm (1.0") to 30 mm (1.2") cuts neck pressure by 17%; going to 38 mm (1.5") cuts it by 34%, to 66% of the 25 mm value. The ribbon itself adds almost nothing — 11.5 g at 25 mm, 14.8 g at 30 mm, 19.5 g at 38 mm — so the trade is nearly free.
+Weight is the numerator and ribbon width the denominator, which is why width is the cheapest fix in the specification. At the same medal weight, widening the ribbon from 25 mm (1.0") to 30 mm (1.2") cuts neck pressure by 17%; going to 38 mm (1.5") cuts it by 34%, to 66% of the 25 mm value. The ribbon itself adds almost nothing — 11.5 g at 25 mm, 14.8 g at 30 mm, 19.5 g at 38 mm — so the trade is nearly free.
 
 The lab sorts assembled medals into four bands. Under 55 g (1.94 oz) is featherweight, for kids' and fun runs. From 55 g to 155 g is the comfort zone, where the standard full-marathon medal lives on a 25 mm or 30 mm ribbon. From 155 g to 220 g is substantial — pair it with at least a 30 mm (1.2") ribbon. Above 220 g (7.76 oz) is heavy load: the medal swings against the sternum, and the specification needs less metal, not a wider ribbon.
 
@@ -76,7 +76,7 @@ Once weight, ribbon, and hanger are understood as one system, the specification 
 
 **Match the ribbon to the band, then stop.** A 38 mm (1.5") jacquard ribbon is the right call above 155 g; below that, 25 mm or 30 mm is enough. Ribbons are produced to our engineering specifications rather than woven in-house, so width, the 850–900 mm (33.5"–35.4") cut length, and the sublimation print should be confirmed as line items, not left to a default.
 
-Run your own specification through the [Challenge Coin & Medal Weight Lab](https://goldvalleyltd.github.io/medal-coin-weight-lab/) before approving artwork: enter diameter, thickness, relief, alloy, ribbon width, and hanger type, and it returns the assembled weight, the neck rating, the dynamic load, and the hanger safety factor. If the lab flags the hanger or the neck band, change the specification — not the runner's celebration.
+Run your specification through the [Challenge Coin & Medal Weight Lab](https://goldvalleyltd.github.io/medal-coin-weight-lab/) before approving artwork: enter diameter, thickness, relief, alloy, ribbon width, and hanger type for the assembled weight, neck rating, dynamic load, and hanger safety factor. If the lab flags the hanger or the neck band, change the specification — not the runner's celebration.
 
 > **📋 Copy-Paste Spec for Your Custom Marathon Medal RFQ:** Shape: round, 70 mm × 3.5 mm (2.76" × 0.138") standard. Alloy: Zamak 3 die-cast zinc (6.6–6.7 g/cm³) or H65 stamped brass (8.4–8.5 g/cm³, ASTM C26800). Relief: 2.5D semi-relief; net core ≥ 1.5 mm (0.059"). Hanger: integrated cast bridge slot for body > 110 g (3.88 oz); Ø1.5 mm (0.059") jump ring only under 110 g. Ribbon: 30 mm (1.2") sublimated polyester, 850–900 mm cut length, for 55–155 g; 38 mm (1.5") jacquard for 155–220 g. Finish: per plating chart; salt spray 48–72 h; inspection AQL 1.5 Major / 4.0 Minor. MOQ 300 pcs; sample 3–7 working days; bulk 12–18 working days.
 
@@ -84,7 +84,7 @@ Run your own specification through the [Challenge Coin & Medal Weight Lab](https
 
 ### How heavy should a full-marathon finisher medal be?
 
-Between 80 g and 135 g assembled is the classic band, and the lab's comfort zone runs to 155 g. A standard 70 mm zinc medal with a 30 mm ribbon totals 112.2 g, squarely in the middle. Below 55 g the medal feels like a fun-run token; above 220 g it needs cutouts or a smaller diameter, not just a wider ribbon.
+Between 80 g and 135 g assembled is the classic band; the lab's comfort zone runs to 155 g. A standard 70 mm zinc medal with a 30 mm ribbon totals 112.2 g, squarely in the middle. Below 55 g the medal feels like a fun-run token; above 220 g it needs cutouts or a smaller diameter, not just a wider ribbon.
 
 ### Can I use a jump ring on a heavy medal?
 
