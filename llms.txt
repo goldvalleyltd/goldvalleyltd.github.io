@@ -1,0 +1,21 @@
+# GoldValley Engineering Lab
+
+> Free interactive DFM tools and engineering whitepapers for custom metal products — challenge coins, finisher medals and wine stoppers — from GoldValley Ltd, a custom metal products manufacturer.
+> The tools compute weight, volume, balance and fit from real dimensions and alloy densities; the guides explain the engineering behind the numbers. Main site: https://www.goldvalleyltd.com/
+
+## Interactive Tools
+
+- [Challenge Coin & Medal Weight Lab](https://goldvalleyltd.github.io/medal-coin-weight-lab/): Estimate net metal weight, volume and DFM rating for challenge coins and finisher medals from diameter, thickness, relief and alloy — with a live 3D preview.
+- [Wine Stopper Physics Lab](https://goldvalleyltd.github.io/winestopper-physics-lab/): Check bore fit, centre of gravity, tip-over safety and mass for metal wine stoppers — with a live 3D preview.
+
+## Engineering Guides
+
+- [Medal Neck Strain & Jump Ring Fatigue: The Dynamic Physics of Marathon Finisher Medals](https://goldvalleyltd.github.io/guides/medal-neck-strain-engineering/): Why marathon medals strain necks and snap jump rings: 2.5g celebration loads, ribbon-width pressure math, and the weight bands that keep a finisher medal comfortable — computed with the lab engine.
+- [Zinc Alloy vs. Brass for Custom Challenge Coins: Density, Die-Casting Tonnage, and Tactile Cost-Efficiency](https://goldvalleyltd.github.io/guides/brass-vs-zinc-alloy-coins/): Zinc alloy vs. brass challenge coins: how the density gap drives weight, feel and cost — and when to choose die-cast zinc or stamped brass.
+- [Center of Gravity & Toppling Moments in Zinc Alloy Wine Stoppers: A Physical Modeling Approach](https://goldvalleyltd.github.io/guides/wine-stopper-center-of-gravity/): Why tall decorative wine stoppers tip over: CG height vs. the 9.25 mm pivot, toppling moments, and the fixes that keep a stag head upright.
+
+## Optional
+
+- [All guides](https://goldvalleyltd.github.io/guides/): index of every engineering guide.
+- [All tools](https://goldvalleyltd.github.io/tools/): index of every interactive tool.
+- [Sitemap](https://goldvalleyltd.github.io/sitemap.xml): machine-readable list of all pages.

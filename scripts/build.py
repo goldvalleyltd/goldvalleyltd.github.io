@@ -3,7 +3,7 @@
 
 Reads Markdown guides from content/guides/, renders them through templates/,
 and generates: index.html, tools/index.html, guides/<slug>/index.html,
-sitemap.xml. Run from the repo root:
+sitemap.xml, llms.txt. Run from the repo root:
 
     ~/workspace/tools/ghpages-venv/bin/python scripts/build.py
 
@@ -186,6 +186,41 @@ def tool_card(t):
     )
 
 
+def llms_txt(guides):
+    """llms.txt (llmstxt.org): machine-readable index of the site's content
+    for LLM crawlers. Regenerated on every build from the same TOOLS list
+    and guide frontmatter as the rest of the site, so it never goes stale
+    when a new guide lands. Keep the summary free of unconfirmed claims
+    (same discipline as guide bodies)."""
+    lines = [
+        "# GoldValley Engineering Lab",
+        "",
+        "> Free interactive DFM tools and engineering whitepapers for custom "
+        "metal products — challenge coins, finisher medals and wine stoppers "
+        "— from GoldValley Ltd, a custom metal products manufacturer.",
+        "> The tools compute weight, volume, balance and fit from real "
+        "dimensions and alloy densities; the guides explain the engineering "
+        "behind the numbers. Main site: https://www.goldvalleyltd.com/",
+        "",
+        "## Interactive Tools",
+        "",
+    ]
+    for t in TOOLS:
+        lines.append(f"- [{t['name']}]({t['url']}): {t['blurb']}")
+    lines += ["", "## Engineering Guides", ""]
+    for m, url in guides:
+        lines.append(f"- [{m['title']}]({url}): {m['description']}")
+    lines += [
+        "",
+        "## Optional",
+        "",
+        f"- [All guides]({SITE}/guides/): index of every engineering guide.",
+        f"- [All tools]({SITE}/tools/): index of every interactive tool.",
+        f"- [Sitemap]({SITE}/sitemap.xml): machine-readable list of all pages.",
+    ]
+    return "\n".join(lines) + "\n"
+
+
 def main():
     base = load_template("base.html")
     guide_tpl = load_template("guide.html")
@@ -287,6 +322,7 @@ def main():
                   f"<priority>{prio}</priority></url>")
     sm.append("</urlset>")
     write(ROOT / "sitemap.xml", "\n".join(sm) + "\n")
+    write(ROOT / "llms.txt", llms_txt(guides))
     print(f"OK: {len(guides)} guide(s), sitemap has {len(urls)} URLs")
 
 
