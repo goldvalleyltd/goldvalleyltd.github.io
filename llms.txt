@@ -10,6 +10,7 @@
 
 ## Engineering Guides
 
+- [Food-Grade Silicone O-Ring Tolerances and Friction Coefficients in Bottle Neck Sealing](https://goldvalleyltd.github.io/guides/silicone-o-ring-sealing-tolerances/): An 18.5 mm bore that varies by a full millimetre: how a stepped silicone ring stack, Shore A 45–55, and 20–35 N of pull force seal a bottle neck that is never the same size twice.
 - [Medal Neck Strain & Jump Ring Fatigue: The Dynamic Physics of Marathon Finisher Medals](https://goldvalleyltd.github.io/guides/medal-neck-strain-engineering/): Why marathon medals strain necks and snap jump rings: 2.5g celebration loads, ribbon-width pressure math, and the weight bands that keep a finisher medal comfortable — computed with the lab engine.
 - [Zinc Alloy vs. Brass for Custom Challenge Coins: Density, Die-Casting Tonnage, and Tactile Cost-Efficiency](https://goldvalleyltd.github.io/guides/brass-vs-zinc-alloy-coins/): Zinc alloy vs. brass challenge coins: how the density gap drives weight, feel and cost — and when to choose die-cast zinc or stamped brass.
 - [Center of Gravity & Toppling Moments in Zinc Alloy Wine Stoppers: A Physical Modeling Approach](https://goldvalleyltd.github.io/guides/wine-stopper-center-of-gravity/): Why tall decorative wine stoppers tip over: CG height vs. the 9.25 mm pivot, toppling moments, and the fixes that keep a stag head upright.
